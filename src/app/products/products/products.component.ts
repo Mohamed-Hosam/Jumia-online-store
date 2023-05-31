@@ -7,25 +7,27 @@ defineComponents(IgcRatingComponent);
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
+  styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent {
-  productsArr:any = [];
-  constructor(private _pService:ProductsService,  private route: ActivatedRoute){}
-  ngOnInit(){
+  productsArr: any = [];
+  constructor(
+    private _pService: ProductsService,
+    private route: ActivatedRoute
+  ) {}
+  ngOnInit() {
     this.getProducts();
   }
 
-  getProducts(){
+  getProducts() {
     this._pService.getProducts().subscribe((res) => {
       this.productsArr = res;
       console.log(this.productsArr);
     });
   }
 
-  reroute(id:number){
+  reroute(id: number) {
     let currentUrl = this.route.snapshot.url.join('/');
-    window.location.href = currentUrl+ "/"+id;
+    window.location.href = currentUrl + '/' + id;
   }
-
 }

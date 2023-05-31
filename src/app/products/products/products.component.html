@@ -1,27 +1,10 @@
-<!-- <div *ngFor="let product of productsArr" class="card-deck">
-
-  <div class="card">
-    <img class="card-img-top" src="{{product.image}}" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">{{product.title}}</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-
-</div> -->
-
-
-
-<mat-grid-list cols="4" rowHeight="500px">
+<mat-grid-list cols="4" rowHeight="430px">
   <div *ngFor="let product of productsArr">
 
     <mat-grid-tile>
 
-      <mat-card (click)="reroute(product.id)" style="width: 250px;height: 380px;">
-        <mat-card-header>
+      <mat-card (click)="reroute(product.id)" class="card">
+        <mat-card-header style="margin-inline: auto;">
           <img mat-card-image src="{{product.image}}" alt="Product Photo" style="height: 200px;width: 200px;">
         </mat-card-header>
         <br>

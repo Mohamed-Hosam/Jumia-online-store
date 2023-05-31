@@ -1,0 +1,22 @@
+.product-details{
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  margin-block: 50px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: lighter;
+}
+
+.rating-igc {
+  --symbol-full-color: #fdcc0d;
+}
+
+.product-img{
+  width: 500px;
+  height: 500px;
+}

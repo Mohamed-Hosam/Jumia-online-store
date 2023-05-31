@@ -1,1 +1,16 @@
-<p>product-details works!</p>
+<div class="container">
+  <div class="product-details">
+    <img src="{{product.image}}" alt="Product Image" class="product-img">
+    <div>
+      <h1>{{product.title}}</h1>
+      <div class="rating">
+        <igc-rating value={{product.rating.rate}} step=".1" min="1" max="5" disabled class="rating-igc"></igc-rating>
+        <span>{{product.rating.rate}}</span>
+        <span>{{product.rating.count}} ratings</span>
+      </div>
+      <br>
+      <h1>${{product.price}}</h1>
+      <h3>{{product.description}}</h3>
+    </div>
+  </div>
+</div>

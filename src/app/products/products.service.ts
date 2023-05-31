@@ -13,4 +13,8 @@ baseUrl: string = "https://fakestoreapi.com/products";
     return this._http.get<any>(this.baseUrl);
   }
 
+  getProductById(id:number): Observable<any>{
+    return this._http.get<any>(this.baseUrl+"/"+id);
+  }
+
 }
