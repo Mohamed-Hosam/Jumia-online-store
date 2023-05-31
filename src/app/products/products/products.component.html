@@ -3,7 +3,7 @@
 
     <mat-grid-tile>
 
-      <mat-card (click)="reroute(product.id)" class="card">
+      <mat-card [routerLink]="['/products/'+ product.id]" routerLinkActive="router-link-active"  class="card">
         <mat-card-header style="margin-inline: auto;">
           <img mat-card-image src="{{product.image}}" alt="Product Photo" style="height: 200px;width: 200px;">
         </mat-card-header>

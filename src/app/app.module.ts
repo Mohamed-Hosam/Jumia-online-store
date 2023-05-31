@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsModule } from './products/products.module';
+import { LoginAndSignupModule } from './login-and-signup/login-and-signup.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProductsModule } from './products/products.module';
     AppRoutingModule,
     SharedModule,
     BrowserAnimationsModule,
-    ProductsModule
+    ProductsModule,
+    LoginAndSignupModule
   ],
   providers: [],
   bootstrap: [AppComponent]

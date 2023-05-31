@@ -7,6 +7,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     HttpClientModule,
     MatGridListModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    RouterModule
   ],
   exports: [
     ProductsComponent

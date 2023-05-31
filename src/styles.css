@@ -13,3 +13,11 @@ body {
   width: 100%;
   margin-inline: auto;
 }
+
+main {
+  min-height: 80vh;
+}
+
+router-outlet + * > :first-child {
+  height: 100%;
+}
