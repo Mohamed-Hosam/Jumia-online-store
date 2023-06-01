@@ -21,4 +21,10 @@
   width: 260px;
   height: 380px;
   background-color: #f5f5f5;
+  transition: transform 250ms;
+}
+
+.card:hover{
+  transform: translateY(-10px);
+  box-shadow: 5px 5px 5px 5px #e1dfdf;
 }
