@@ -1,4 +1,4 @@
-<mat-toolbar>
+<mat-toolbar id="nav-bar" >
   <div class="container" style="display: flex; align-items: center;justify-content: center;">
 
     <button mat-icon-button>
@@ -38,7 +38,7 @@
     </button>
 
   </div>
-  <button mat-button>SignOut</button>
+  <button mat-button (click)="signOut()">SignOut</button>
 </div>
 </mat-toolbar>
 

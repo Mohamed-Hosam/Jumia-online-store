@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,20 +8,30 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent {
-
   signupForm = new FormGroup({
-    firstName: new FormControl(),
-    lastName: new FormControl(),
-    homeAddress: new FormControl(),
-    email: new FormControl(),
-    password: new FormControl(),
+    firstName: new FormControl('', Validators.required),
+    lastName: new FormControl('', Validators.required),
+    homeAddress: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required),
   });
 
-  constructor(public router:Router){}
+  constructor(public router: Router) {}
+  users: any = [];
 
   onSubmit() {
-    console.log(this.signupForm);
-    this.router.navigate(['/']);
+    if (this.signupForm.valid) {
+      let data: any = localStorage.getItem('users');
+      this.users = JSON.parse(data);
+      if (this.users === null) {
+        this.users = [];
+      }
+      this.users.push(this.signupForm.value);
+      localStorage.setItem('users', JSON.stringify(this.users));
 
+      this.router.navigate(['/']);
+    } else {
+      alert('Please enter all fields');
+    }
   }
 }

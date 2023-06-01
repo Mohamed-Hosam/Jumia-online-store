@@ -7,6 +7,7 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsModule } from './products/products.module';
 import { LoginAndSignupModule } from './login-and-signup/login-and-signup.module';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { LoginAndSignupModule } from './login-and-signup/login-and-signup.module
     ProductsModule,
     LoginAndSignupModule
   ],
-  providers: [],
+  providers: [NavbarComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
