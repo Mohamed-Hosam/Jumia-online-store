@@ -22,7 +22,6 @@ export class ProductsComponent {
   getProducts() {
     this._pService.getProducts().subscribe((res) => {
       this.productsArr = res;
-      console.log(this.productsArr);
     });
   }
 

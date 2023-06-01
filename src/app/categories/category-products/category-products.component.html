@@ -1,0 +1,24 @@
+<mat-grid-list cols="4" rowHeight="430px">
+  <div *ngFor="let product of productsArr">
+
+    <mat-grid-tile>
+
+      <mat-card [routerLink]="['/products/'+ product.id]" routerLinkActive="router-link-active"  class="card">
+        <mat-card-header style="margin-inline: auto;">
+          <img mat-card-image src="{{product.image}}" alt="Product Photo" style="height: 200px;width: 200px;">
+        </mat-card-header>
+        <br>
+        <mat-card-content>
+          <p class="product-title">{{product.title}}</p>
+          <div class="rating">
+            <igc-rating value={{product.rating.rate}} step=".1" min="1" max="5" disabled class="rating-igc"></igc-rating>
+            <span>{{product.rating.rate}}</span>
+            </div>
+          <h2>${{product.price}}</h2>
+        </mat-card-content>
+      </mat-card>
+
+      </mat-grid-tile>
+
+    </div>
+      </mat-grid-list>

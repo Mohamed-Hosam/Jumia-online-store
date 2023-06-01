@@ -23,9 +23,12 @@ export class ProductDetailsComponent {
   getProductById() {
     this._products.getProductById(this.id).subscribe((res) => {
       this.product = res;
-      console.log(this.product.title);
-
     });
+  }
+
+  addToCart(id:any){
+
+
   }
 
 }

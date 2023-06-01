@@ -9,37 +9,23 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class NavbarComponent {
 constructor(private route: ActivatedRoute, public router: Router){}
 
-// reroute(id:any){
-//   let currentUrl = this.route.snapshot.url.join('/');
-//   window.location.href = currentUrl+ "/"+id;
-// }
 loggedIn = false;
 ngOnInit(){
 this.checklogedin();
 }
 
 checklogedin(){
-  console.log("loggedIn  in the begging:"+this.loggedIn);
-
   let data:any = localStorage.getItem('loggedIn');
   this.loggedIn = JSON.parse(data).loggedIn;
-  console.log("loggedIn  after change:"+this.loggedIn);
 
-  let temp = document.getElementById("nav-bar");
-  // temp === null?"":( this.loggedIn ===true? temp.style.display = "true" : temp.style.display="none");
+  let temp = document.getElementById('navbar');
   if(temp !== null){
-    if(this.loggedIn == true){
-      temp.style.display = "true";
+    if(Boolean(this.loggedIn)){
+      temp.style.display = "block";
     }else{
       temp.style.display = "none";
     }
   }
-
-  console.log(this.loggedIn);
-  console.log("later"+ (temp===null?"abc":temp.style.display));
-
-
-
 }
 
 signOut(){

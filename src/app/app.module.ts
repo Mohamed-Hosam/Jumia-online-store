@@ -8,6 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsModule } from './products/products.module';
 import { LoginAndSignupModule } from './login-and-signup/login-and-signup.module';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { HomeModule } from './home/home.module';
+import { CartModule } from './cart/cart.module';
+import { CategoriesModule } from './categories/categories.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
     SharedModule,
     BrowserAnimationsModule,
     ProductsModule,
-    LoginAndSignupModule
+    LoginAndSignupModule,
+    HomeModule,
+    CartModule,
+    CategoriesModule
   ],
   providers: [NavbarComponent],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-<mat-toolbar id="nav-bar" >
+<mat-toolbar id="navbar" >
   <div class="container" style="display: flex; align-items: center;justify-content: center;">
 
     <button mat-icon-button>
@@ -9,10 +9,10 @@
   <span class="spacer"></span>
 
   <button mat-button [routerLink]="['/home']">Home</button>
-  <button mat-button>Cart</button>
+  <button mat-button [routerLink]="['/cart']">Cart</button>
   <button mat-button [routerLink]="['/products']">Products</button>
 
-  <button mat-button>Categories</button>
+  <button mat-button [routerLink]="['/categories']">Categories</button>
   <button mat-button>Brands</button>
 
   <span class="spacer"></span>

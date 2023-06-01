@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { CarouselComponent } from './carousel/carousel.component';
-
+import { ProductsModule } from '../products/products.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +10,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     CarouselComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ProductsModule
   ],
   exports:[
     HomeComponent,

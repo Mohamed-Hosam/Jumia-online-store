@@ -1,0 +1,24 @@
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: lighter;
+}
+
+.rating-igc {
+  --symbol-full-color: #fdcc0d;
+}
+
+.product-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.card {
+  width: 260px;
+  height: 380px;
+  background-color: #f5f5f5;
+}
